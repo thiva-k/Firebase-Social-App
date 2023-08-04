@@ -75,9 +75,12 @@ export const Post = (props :Props )=>{
 
 
 
-return(
 
-    <div className="postsBOx">
+
+    if (user){
+        return(
+
+            <div className="postsBOx">
         <div className="title">
             <h1>{post.title}</h1>
         </div>
@@ -91,7 +94,20 @@ return(
            {like &&<p>Likes:{like.length}  </p>}
         </div>
     </div>
-)
+
+
+        )
+    }else{
+        return null
+    }
+
+       
+    
+        
+    
+
+    
+
 
 
 }
